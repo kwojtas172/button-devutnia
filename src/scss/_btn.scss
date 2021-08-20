@@ -1,0 +1,21 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16rem;
+    height: 3rem;
+    color: #29293d;
+    font-size: 2rem;
+    font-weight: 900;
+    background-color: #b3b3cc;
+    border: solid 0.3rem #b3b3cc;
+    transition-duration: 0.3s;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: darken(#b3b3cc, 20%);
+    border: solid 0.3rem (darken(#b3b3cc, 20%));
+    transform: scale(1.5);
+}
