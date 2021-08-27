@@ -1,10 +1,10 @@
 import './scss/app.scss';
 
-import Button from './components/Button.jsx';
+import Main from './components/Main.jsx';
 
 function App() {
   return (
-    <Button />
+    <Main />
   );
 }
 

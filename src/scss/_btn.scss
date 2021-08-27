@@ -17,5 +17,8 @@
 .btn:hover {
     background-color: darken(#b3b3cc, 20%);
     border: solid 0.3rem (darken(#b3b3cc, 20%));
-    // transform: scale(1.5);
+}
+
+h1 {
+    color: lighten(#29293d, 15%);
 }
