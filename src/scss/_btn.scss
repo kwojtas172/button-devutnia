@@ -2,8 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 16rem;
-    height: 3rem;
+    max-width: 28rem;
+    height: auto;
     color: #29293d;
     font-size: 2rem;
     font-weight: 900;
@@ -14,8 +14,8 @@
     cursor: pointer;
 }
 
-// .btn:hover {
-//     background-color: darken(#b3b3cc, 20%);
-//     border: solid 0.3rem (darken(#b3b3cc, 20%));
-//     transform: scale(1.5);
-// }
+.btn:hover {
+    background-color: darken(#b3b3cc, 20%);
+    border: solid 0.3rem (darken(#b3b3cc, 20%));
+    // transform: scale(1.5);
+}
