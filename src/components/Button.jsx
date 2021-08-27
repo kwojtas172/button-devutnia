@@ -5,14 +5,6 @@ const Button = () => {
     const [btnNameX, setBtnNameX] = React.useState(true);
     const [btnNameY, setBtnNameY] = React.useState(true);
 
-    // document.addEventListener('mousemove', e => {
-    //     showButton(e);
-    // })
-
-    // document.removeEventListener('mousemove', e => {
-    //     showButton(e);
-    // })
-
     function showButton(e) {
             const mouseX = e.clientX;    
             const mouseY = e.clientY;
