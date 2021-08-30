@@ -1,0 +1,24 @@
+.loader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader__title {
+    margin-bottom: 2rem;
+}
+
+.loader__spin {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: solid 1rem darken(#b3b3cc, 5%);
+    border-top: solid 1rem darken(#b3b3cc, 20%);
+    animation: animation 2s linear infinite;
+}
+
+@keyframes animation {
+    0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

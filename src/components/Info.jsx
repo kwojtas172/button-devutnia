@@ -1,5 +1,6 @@
 import React from 'react';
 import InfoData from './InfoData';
+import InfoLoader from './InfoLoader';
 
 const Info = () => {
 
@@ -12,11 +13,11 @@ const Info = () => {
             setDataFromFetch(data)
         })
         .catch(err => console.log(err))
-    }, [setDataFromFetch])
+    }, [])
 
     return (
         <div>
-            {dataFromFetch ? <InfoData data={dataFromFetch} /> :<h1>Poczekaj...</h1>}    
+            {dataFromFetch ? <InfoData data={dataFromFetch} /> : <InfoLoader />}    
         </div>
     );
 }

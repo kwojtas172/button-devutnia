@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from './Button';
-import Info from './Info'
+import Info from './Info';
 
 const Main = () => {
     const [isShowButton, setIsShowButton] = React.useState(true);
