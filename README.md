@@ -6,7 +6,7 @@ Project created for a recruitment task (for the devutnia). It's' a button whose 
 
 ## Used technologies / skills
 
-JavaScript (framework: React.js), HTML (version 5 - latest tags) and CSS (Sass preprocessor) were used to create the front-end part.
+JavaScript (framework: React.js), HTML (version 5 - latest tags) and CSS (preprocessor: Sass) were used to create the front-end part.
 
 Node.js (framework: Express.js) was used to create the back-end part.
 
