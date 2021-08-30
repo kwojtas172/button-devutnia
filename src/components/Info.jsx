@@ -9,7 +9,7 @@ const Info = () => {
     React.useEffect(() => {
         const fetchFromApi = () => {
             fetch('https://btn-shu-api.herokuapp.com/', {
-                mode: 'cors',
+                mode: 'no-cors',
                 cache: 'no-cache',
                 credentials: 'same-origin',
                 headers: {
