@@ -1,0 +1,30 @@
+.data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.data__title {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+.data__description {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+.list {
+    list-style: none;
+}
+
+.list__element {
+   font-size: 1.3rem;
+}
+
+.list__link {
+    text-decoration: none;
+    color: #29293d;
+    font-weight: 500;
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import InfoData from './InfoData';
 
 const Info = () => {
 
@@ -11,11 +12,11 @@ const Info = () => {
             setDataFromFetch(data)
         })
         .catch(err => console.log(err))
-    }, [dataFromFetch])
+    }, [setDataFromFetch])
 
     return (
         <div>
-            {dataFromFetch ? <p>{dataFromFetch.description}</p> :<h1>Poczekaj...</h1>}    
+            {dataFromFetch ? <InfoData data={dataFromFetch} /> :<h1>Poczekaj...</h1>}    
         </div>
     );
 }
