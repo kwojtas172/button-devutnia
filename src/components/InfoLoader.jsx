@@ -1,5 +1,3 @@
-import React from 'react';
-
 const InfoLoader = () => {
     return (
         <div className='loader'>

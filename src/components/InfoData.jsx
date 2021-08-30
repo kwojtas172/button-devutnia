@@ -10,7 +10,8 @@ const InfoData = ({data}) => {
                 {data.skills.map((skill, idx)=><li key={idx} className='list__element'>{skill}</li>)}
             </ul>
             <p className='data__description'>Jeśli chcesz dowiedzieć się więcej, <a href={`mailto: ${data.email}`} className='list__link'>napisz.</a></p>
-            <p className='data__description'>Mój profil na linkedin jest dostępny <a href={data.linkedin} className='list__link' target='_blank' rel='noreferrer'>tutaj.</a></p>
+            <p className='data__description'>Możesz zobaczyć mój porfil na <a href={data.linkedin} className='list__link' target='_blank' rel='noreferrer'>linkedin</a>.</p>
+            <p className='data__description data__description--small '>PS Repozytorium dostępne <a href={data.repo} className='list__link' target='_blank' rel='noreferrer'>tutaj</a></p>
         </div>
     );
 }
