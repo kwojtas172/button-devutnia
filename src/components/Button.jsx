@@ -17,15 +17,6 @@ const Button = ({handleShowButton}) => {
             }
         }
 
-    React.useEffect(() => {
-        if(!isOff) {
-            document.addEventListener('mousemove', showButton);
-        } else {
-            document.removeEventListener('mousemove', showButton);
-            handleShowButton();
-        }
-    }, [isOff]) // eslint-disable-line react-hooks/exhaustive-deps
-
     const handleBtnNameX = (mouseX, btnPosition) => {
         if(mouseX < btnPosition.left) {
             setBtnNameX('w prawo');
@@ -42,12 +33,21 @@ const Button = ({handleShowButton}) => {
         } else if(mouseY > btnPosition.bottom) {
             setBtnNameY('w górę');
         } else setBtnNameY('');
-       
+        
     }
 
     const showMe = () => { 
         setIsOff(true);
     }
+
+    React.useEffect(() => {
+        if(!isOff) {
+            document.addEventListener('mousemove', showButton);
+        } else {
+            document.removeEventListener('mousemove', showButton);
+            handleShowButton();
+        }
+    }, [isOff]) // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
         <button className='btn' id='btn' onClick={showMe}>{(btnNameX || btnNameY) ? `Przesuń myszką ${(btnNameX === true || btnNameY === true ) ? `` : `${btnNameX} ${btnNameY}`}` : 'Kliknij mnie!'}</button>
