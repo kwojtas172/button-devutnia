@@ -9,11 +9,11 @@ const Info = () => {
     React.useEffect(() => {
         const fetchFromApi = () => {
             fetch('https://btn-shu-api.herokuapp.com/', {
-                mode: 'no-cors',
                 cache: 'no-cache',
                 credentials: 'same-origin',
                 headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
                 }
             })
             .then(res => res.json())
