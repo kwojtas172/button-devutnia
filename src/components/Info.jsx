@@ -8,7 +8,14 @@ const Info = () => {
 
     React.useEffect(() => {
         const fetchFromApi = () => {
-            fetch('https://btn-shu-api.herokuapp.com/')
+            fetch('https://btn-shu-api.herokuapp.com/', {
+                mode: 'cors',
+                cache: 'no-cache',
+                credentials: 'same-origin',
+                headers: {
+                'Content-Type': 'application/json'
+                }
+            })
             .then(res => res.json())
             .then(data => {
                 setDataFromFetch(data)
