@@ -8,7 +8,7 @@ const Info = () => {
 
     React.useEffect(() => {
         const fetchFromApi = () => {
-            fetch('https://btn-shu-api.herokuapp.com/', {
+            fetch('https://silicon-tartan-double.glitch.me/', {
                 cache: 'no-cache',
                 credentials: 'same-origin',
                 headers: {
