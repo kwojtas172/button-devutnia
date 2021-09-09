@@ -6,28 +6,32 @@ const Info = () => {
 
     const [dataFromFetch, setDataFromFetch] = React.useState(null);
 
+    const fetchFromApi = React.useCallback(() => {
+        fetch('https://silicon-tartan-double.glitch.me/', {
+            cache: 'no-cache',
+            credentials: 'same-origin',
+            headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
+            }
+        })
+        .then(res => res.json())
+        .then(data => {
+            setDataFromFetch(data)
+        })
+        .catch(err => {
+            console.log(err);
+            fetchFromApi()
+        })
+        }, [setDataFromFetch]);
+        
+
     React.useEffect(() => {
-        const fetchFromApi = () => {
-            fetch('https://silicon-tartan-double.glitch.me/', {
-                cache: 'no-cache',
-                credentials: 'same-origin',
-                headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*'
-                }
-            })
-            .then(res => res.json())
-            .then(data => {
-                setDataFromFetch(data)
-            })
-            .catch(err => {
-                console.log(err);
-                fetchFromApi()
-            })
-            };
             
             fetchFromApi()
-    }, [])
+            
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [setDataFromFetch])
 
     return (
         <div>
